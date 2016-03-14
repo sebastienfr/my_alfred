@@ -16,10 +16,6 @@ config.set_string('-dict', os.path.join(modeldir, 'en-us/cmudict-en-us.dict'))
 
 
 p = pyaudio.PyAudio()
-#TODO
-print(p.get_default_host_api_info())
-print(p.get_default_input_device_info())
-print(p.get_device_count())
 stream = p.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=1024)
 stream.start_stream()
 
